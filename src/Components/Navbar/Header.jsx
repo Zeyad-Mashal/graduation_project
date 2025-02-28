@@ -28,13 +28,12 @@ const Header = () => {
       </Navbar.Brand>
 
       <div className="flex md:order-2">
-        <Button.Link
-          href="/auth"
+        <Button
           className={`border rounded-lg mr-5 bg-transparent text-white bg-teal-600`}
           pill
         >
           Login
-        </Button.Link>
+        </Button>
 
         <Button className="border rounded-lg bg-teal-600 text-white" pill>
           Get started
