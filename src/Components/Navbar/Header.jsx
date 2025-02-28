@@ -28,13 +28,13 @@ const Header = () => {
       </Navbar.Brand>
 
       <div className="flex md:order-2">
-        <Button
-          href="https://graduation-project-gules.vercel.app/auth"
+        <Button.Link
+          href="/auth"
           className={`border rounded-lg mr-5 bg-transparent text-white bg-teal-600`}
           pill
         >
           Login
-        </Button>
+        </Button.Link>
 
         <Button className="border rounded-lg bg-teal-600 text-white" pill>
           Get started
@@ -47,10 +47,7 @@ const Header = () => {
           <Navbar.Link href="/" className="text-lg text-black" active>
             Home
           </Navbar.Link>
-          <Navbar.Link
-            href="https://graduation-project-gules.vercel.app/auth"
-            className="text-lg text-black"
-          >
+          <Navbar.Link href="/auth" className="text-lg text-black">
             For Employers
           </Navbar.Link>
         </div>

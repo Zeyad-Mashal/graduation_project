@@ -18,11 +18,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} /> {/* Home route */}
-          <Route
-            path="https://graduation-project-gules.vercel.app/auth"
-            element={<Auth />}
-          />{" "}
-          {/* Authentication route */}
+          <Route path="/auth" element={<Auth />} /> {/* Authentication route */}
           <Route path="/jobs" element={<Job />} />
           <Route path="/jobsDetails" element={<JobDetails />} />
           <Route path="/feedback" element={<FeedbackForm />} />
