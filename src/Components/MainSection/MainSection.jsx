@@ -43,7 +43,7 @@ const MainSection = () => {
                 />
                 <Link to={"/jobs"}>
                   <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 w-full md:w-auto">
-                    Search Jobs
+                    Search
                   </button>
                 </Link>
               </div>

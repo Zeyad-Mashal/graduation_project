@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
-
+import "./FeedbackForm.css";
 const FeedbackForm = () => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
@@ -62,7 +62,7 @@ const FeedbackForm = () => {
         </div>
       )}
 
-      <div className="w-full max-w-4xl min-h-[80vh] p-6 sm:p-12 bg-white shadow-xl rounded-2xl">
+      <div className="w-full max-w-4xl min-h-[80vh] p-6 sm:p-12 bg-white shadow-xl rounded-2xl feedBackForm">
         <form onSubmit={handleSubmit}>
           {/* Feedback Textarea */}
           <label className="block text-gray-700 font-semibold text-lg sm:text-xl mb-2 sm:mb-4">

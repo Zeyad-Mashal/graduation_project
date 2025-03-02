@@ -12,7 +12,6 @@
 .app {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -82,6 +81,10 @@ select {
 #className {
   display: flex;
   flex-direction: row;
+}
+.form-group input {
+  border: none;
+  border-bottom: 1px solid #024c7e;
 }
 .form-group .Names {
   width: 50%;
@@ -217,4 +220,9 @@ select {
 .success-message h2 {
   color: green;
   font-size: 30px;
+}
+.success-message button {
+  text-decoration: underline;
+  color: blue;
+  font-size: 20px;
 }

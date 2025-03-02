@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css"; // استيراد ملف الـ CSS
 import { MdDone } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Form = () => {
   // هنا بنحفظ البيانات اللي المستخدم بيكتبها في الفورم
   const [formData, setFormData] = useState({
@@ -48,6 +49,9 @@ const Form = () => {
           <div className="success-message">
             <MdDone />
             <h2>Form submitted successfully!</h2>
+            <button>
+              <Link to={"/feedback"}>Go To FeedBack</Link>
+            </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>

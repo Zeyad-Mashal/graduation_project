@@ -21,6 +21,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .job_card {
@@ -89,10 +91,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  width: 100%;
 }
 
 .pagination-button {
-  padding: 8px 12px;
+  padding: 8px;
   margin: 0 5px;
   border: 1px solid #ddd;
   background-color: #fff;
