@@ -4,27 +4,45 @@ import Home from "./Components/Home/Home";
 import Job from "./Components/Job/Job";
 import Header from "./Components/Navbar/Header";
 import CustomFooter from "./Components/CustomFooter/CustomFooter";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import JobDetails from "./Components/JobDetails/JobDetails";
 import FeedbackForm from "./Components/Feedback/FeedbackForm";
-// import ApplicationForm from "./Components/Application/ApplicationForm";
+import ApplicationForm from "./Components/Application/Form";
+import JobPosting from "./Components/PostJob/JobPosting";
 import { useState } from "react";
+
 function App() {
-  const [auth, setAuth] = useState(true);
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const hideNavbarOnPaths = ["/auth"]; // List of paths where navbar should be hidden
+
   return (
     <>
-      {auth ? <Header /> : null}
+      {/* Show Navbar on all pages except those in hideNavbarOnPaths */}
+      {!hideNavbarOnPaths.includes(location.pathname) && <Header />}
 
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Home route */}
-          <Route path="/auth" element={<Auth />} /> {/* Authentication route */}
-          <Route path="/jobs" element={<Job />} />
-          <Route path="/jobsDetails" element={<JobDetails />} />
-          <Route path="/feedback" element={<FeedbackForm />} />
-          {/* <Route path="/jobApp" element={<ApplicationForm />} /> */}
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/jobs" element={<Job />} />
+        <Route path="/jobsDetails" element={<JobDetails />} />
+        <Route path="/feedback" element={<FeedbackForm />} />
+        <Route path="/jobApp" element={<ApplicationForm />} />
+        <Route path="/create_job" element={<JobPosting />} />
+      </Routes>
+
       <CustomFooter />
     </>
   );

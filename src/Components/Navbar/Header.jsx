@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Navbar } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,11 +33,11 @@ const Header = () => {
           className={`border rounded-lg mr-5 bg-transparent text-white bg-teal-600`}
           pill
         >
-          Login
+          <Link to="/auth">Sign in</Link>
         </Button>
 
         <Button className="border rounded-lg bg-teal-600 text-white" pill>
-          Get started
+          <Link to="/auth">Get Stated</Link>
         </Button>
         <Navbar.Toggle />
       </div>
@@ -46,7 +47,7 @@ const Header = () => {
           <Navbar.Link href="/" className="text-lg text-black" active>
             Home
           </Navbar.Link>
-          <Navbar.Link href="/auth" className="text-lg text-black">
+          <Navbar.Link href="/create_job" className="text-lg text-black">
             For Employers
           </Navbar.Link>
         </div>

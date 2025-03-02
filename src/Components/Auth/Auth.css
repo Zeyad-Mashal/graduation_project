@@ -14,7 +14,7 @@
 .login-signup-container {
   display: flex;
   width: 900px;
-  height: 500px;
+  height: auto;
   background-color: #004a7c;
   border-radius: 15px;
   overflow: hidden;
@@ -231,6 +231,10 @@ form {
   display: none;
 }
 @media screen and (max-width: 789px) {
+  .main_container {
+    height: auto;
+    padding: 1rem;
+  }
   .login-signup-container {
     margin: 1rem;
     flex-direction: column;

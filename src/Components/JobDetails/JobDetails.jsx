@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 import "./JobDetails.css";
+import { Link } from "react-router-dom";
 const JobDetails = () => {
   const jobData = {
     title: "Call Center Agent - English Account - Part Time",
@@ -113,7 +114,9 @@ const JobDetails = () => {
             <strong>{jobData.company.name}</strong> - {jobData.location}
           </p>
           <p className="posted-date">{jobData.postedDate}</p>
-          <button className="apply-button">Apply Now</button>
+          <button className="apply-button">
+            <Link to={"/jobApp"}>Apply Now</Link>
+          </button>
         </div>
 
         <div className="company-logo">
