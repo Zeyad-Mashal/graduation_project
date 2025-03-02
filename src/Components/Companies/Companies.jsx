@@ -15,7 +15,7 @@ const Companies = () => {
   return (
     <>
       <section className="py-5 companies">
-        <div className="container mx-auto">
+        <div className="mx-auto">
           <h2 className="text-3xl font-bold text-blue-800 text-center mb-16">
             Join Egypt's Top Companies
           </h2>

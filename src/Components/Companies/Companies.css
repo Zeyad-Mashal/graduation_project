@@ -4,3 +4,9 @@
 .companies {
   background-color: #eee;
 }
+.slider-container {
+  width: 100%;
+}
+.slider-container img {
+  width: 250px;
+}
