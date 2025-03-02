@@ -15,6 +15,7 @@ import FeedbackForm from "./Components/Feedback/FeedbackForm";
 import ApplicationForm from "./Components/Application/Form";
 import JobPosting from "./Components/PostJob/JobPosting";
 import { useState } from "react";
+import PreviewFeedback from "./Components/PreviewFeedBack/PreviewFeedback";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function AppContent() {
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/jobApp" element={<ApplicationForm />} />
         <Route path="/create_job" element={<JobPosting />} />
+        <Route path="/preview_feedback" element={<PreviewFeedback />} />
       </Routes>
 
       <CustomFooter />
