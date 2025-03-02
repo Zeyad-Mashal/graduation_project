@@ -6,8 +6,6 @@
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom right, #fafafa, #e8f1f5, #9bdfff);
-  background-size: cover;
-  background-position: center;
 }
 
 /* Main container for both login and signup sections */
